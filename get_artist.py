@@ -6,7 +6,7 @@ import collections
 
 
 def info():
-    path = '嗨粉电台/'
+    path = 'assets/'
     artist_list = []
     for file_name in os.listdir(path):
         song = eyed3.load(os.path.join(path, file_name))

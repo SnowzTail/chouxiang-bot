@@ -34,7 +34,7 @@ def artist(update, context):
 def playlist(update, context):
     # artist_name = update.message.text[len("/playlist "):]
     playlist_name = ""
-    path = '/home/i/telegram/嗨粉电台/'
+    path = '/home/i/telegram/assets/'
     if not update.message.text.count(' '):
         update.message.reply_text('用法: /playlist 歌手名 (如 /playlist 麻扣)')
     else:
@@ -48,7 +48,7 @@ def playlist(update, context):
 
 def song(update, context):
     # song_name = update.message.text[len("/song "):]
-    path = '/home/i/telegram/嗨粉电台/'
+    path = '/home/i/telegram/assets/'
     if not update.message.text.count(' '):
         file = os.path.join(path, random.choice(os.listdir(path)))
         update.message.reply_audio(open(file, 'rb'))
